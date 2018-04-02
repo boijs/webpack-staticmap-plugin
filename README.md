@@ -4,9 +4,15 @@
 generate assets map of webpack(v4) compilation
 
 ## Usage
+```
+npm install webpack-staticmap-plugin --save-dev
+```
+
 `webpack.config.js`:
 ```javascript
-{
+const StaticMapPulgin = require('webpack-staticmap-plugin');
+
+module.exports = {
   module: {
     rules: [...]
   },
