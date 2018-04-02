@@ -1,0 +1,25 @@
+{
+  "name": "webpack-staticmap-plugin",
+  "version": "0.0.1",
+  "description": "generate assets map of webpack(v4) compilation",
+  "keywords": [
+    "webpack",
+    "map"
+  ],
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js index.js"
+  },
+  "main": "index.js",
+  "author": "zhoujunpeng <rico.zjp@gmail.com> (https://github.com/zhoujunpeng)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zhoujunpeng/webpack-staticmap-plugin.git"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
