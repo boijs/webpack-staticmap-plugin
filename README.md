@@ -26,6 +26,7 @@ module.exports = {
 
 ## Options
 - `outputfile`: specific name of the generated file, `static.json` by default;
-- `dev`: enable/disable development mode.
+- `dev`: enable/disable development mode;
+- `publicPath`: root path of all static files,default to be `'/'`;
 
 > assets map info would be assigned to global varable under development mode.

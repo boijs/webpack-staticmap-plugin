@@ -6,6 +6,7 @@ class WebpackStaticmapPlugin {
   constructor(options) {
     this.options = Object.assign({
       dev: false,
+      publicPath: '/',
       outputfile: 'static.json'
     }, options);
   }
@@ -33,17 +34,17 @@ class WebpackStaticmapPlugin {
         AssetsMap[key] = AssetsMap[key] || {};
         if (_.isArray(Assets[key])) {
           Assets[key].forEach(file => {
-            AssetsMap[key][Path.extname(file).split('.')[1]] = Path.join(PublicPath, file);
+            AssetsMap[key][Path.extname(file).split('.')[1]] = Path.join(PublicPath, this.options.publicPath, file);
           });
         } else {
-          AssetsMap[key][Path.extname(Assets[key]).split('.')[1]] = Path.join(PublicPath, Assets[key]);
+          AssetsMap[key][Path.extname(Assets[key]).split('.')[1]] = Path.join(PublicPath, this.options.publicPath, Assets[key]);
         }
       }
 
       if (this.options.dev) {
         Object.defineProperty(global, AppName, {
           enumerable: true,
-          writable: false,
+          writable: true,
           value: AssetsMap
         });
       } else {
