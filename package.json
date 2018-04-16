@@ -1,6 +1,6 @@
 {
   "name": "webpack-staticmap-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generate assets map of webpack(v4) compilation",
   "keywords": [
     "webpack",
